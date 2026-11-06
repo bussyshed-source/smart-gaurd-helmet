@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Guard Helmet</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #0a0a1f, #12122b);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, #00e5ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #a0a0c0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .dashboard {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: rgba(20, 20, 45, 0.9);
+      border: 2px solid #00e5ff;
+      border-radius: 20px;
+      padding: 30px 35px;
+      min-width: 240px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(0, 229, 255, 0.4);
+    }
+
+    .card h3 {
+      color: #00e5ff;
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .status-dot {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+    }
+
+    .on {
+      background: #00ff88;
+      box-shadow: 0 0 30px #00ff88, 0 0 60px #00ff88;
+      animation: pulse 1.2s infinite;
+    }
+
+    .sos-box {
+      background: #ff1744;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding: 14px 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      animation: blink 1s infinite;
+    }
+
+    .location {
+      color: #b0b0d0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      color: #666688;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.85; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>SMART GUARD HELMET</h1>
+    <p>Real-time Accident Detection System</p>
+  </div>
+
+  <div class="dashboard">
+    <!-- Buzzer Card -->
+    <div class="card">
+      <h3>BUZZER STATUS</h3>
+      <div class="status-dot on"></div>
+      <p style="color:#00ff88; font-weight:bold; font-size:1.2rem;">ACTIVE</p>
+    </div>
+
+    <!-- LED Card -->
+    <div class="card">
+      <h3>LED ALERT</h3>
+      <div class="status-dot on"></div>
+      <p style="color:#00ff88; font-weight:bold; font-size:1.2rem;">ACTIVE</p>
+    </div>
+
+    <!-- SOS Card -->
+    <div class="card">
+      <h3>SOS ALERT</h3>
+      <div class="sos-box">ACCIDENT DETECTED</div>
+      <div class="location">
+        Live Location:<br>
+        27.1767° N, 78.0081° E<br>
+        Agra, Uttar Pradesh
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Smart Guard Helmet • Safety Beyond Limits
+  </div>
+</body>
+</html>
